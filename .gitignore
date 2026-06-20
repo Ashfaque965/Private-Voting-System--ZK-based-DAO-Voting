@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+bower_components/
+yarn.lock
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+
+# Circom build artifacts
+*.r1cs
+*.sym
+*_js/
+*.ptau
+*.zkey
+vk.json
+proof.json
+public.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build outputs
+dist/
+build/
+frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.mocha.json
+
+# Secrets
+secrets.txt
+privatekeys.txt

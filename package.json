@@ -1,0 +1,46 @@
+{
+  "name": "private-voting-system-zk-based-dao-voting",
+  "version": "1.0.0",
+  "description": "A sophisticated ZK-SNARK based private voting system for DAOs. Votes remain private while cryptographically proving vote totals are correct.",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "test:circuits": "echo 'Circuit tests not yet configured'",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "verify": "hardhat verify",
+    "dev": "hardhat node",
+    "frontend:install": "cd frontend && npm install",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "circuits:compile": "circom circuits/vote.circom --r1cs --wasm --sym",
+    "setup:trusted": "snarkjs powersoftau new bn128 12 pot12_0000.ptau",
+    "lint": "echo 'Linting not yet configured'"
+  },
+  "keywords": [
+    "zk-snark",
+    "private-voting",
+    "dao",
+    "ethereum",
+    "circom",
+    "snarkjs",
+    "solidity"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "chai": "^4.3.7",
+    "ethers": "^6.0.0",
+    "hardhat": "^2.14.0",
+    "@types/node": "^18.0.0"
+  },
+  "dependencies": {
+    "snarkjs": "^0.7.0",
+    "circomlib": "^2.0.5",
+    "dotenv": "^16.0.3"
+  }
+}
